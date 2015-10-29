@@ -2,6 +2,7 @@ import           Control.Monad
 import           Data.Monoid
 import           Data.Bits
 import           Data.ByteString as B
+import           Data.ByteString.Internal (fromForeignPtr)
 import           Data.Word
 import           Data.Monoid
 import           Foreign.C.Types (CSize)
@@ -54,4 +55,5 @@ main = do
       forever $ do
         offset <- recv sock 4
         printf "Echoing: %u\n" $ getWord32HostOrder offset
+        let blockSB = fromForeignPtr (castForeignPtr shmPtr) (fromIntegral (getWord32HostOrder offset)) (fromIntegral blockSize)
         send sock offset
