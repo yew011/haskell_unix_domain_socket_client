@@ -23,7 +23,7 @@ the **stenographer** project.
 	|                                |			     ||
 	|--------------------------------|			     ||
 	|                                |			     ||
-	|   pkt payload                  |			     ||
+	|   packet                       |			     ||
 	|                                |			     ||
 	|--------------------------------|			     \/
 	|                                |
@@ -35,7 +35,7 @@ the **stenographer** project.
 	|                                |
 	|--------------------------------|
 	|                                |
-	|   pkt payload                  |
+	|   packet                       |
 	|                                |
 	+--------------------------------+
 
@@ -46,4 +46,8 @@ the **stenographer** project.
 * The **"tpacket3_hdr->tp_next_offset"** provides the offset from the starting
   address of the **"struct tpacket3_hrd"** to the next one.
 * The **"tpacket3_hdr->tp_nsec"** provides the timestamp in nanoseconds (I think).
+
+## Kernel Header File
+
+[if_packet.h](http://lxr.free-electrons.com/source/include/uapi/linux/if_packet.h#L232)
 
