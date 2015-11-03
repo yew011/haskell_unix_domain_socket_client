@@ -10,6 +10,15 @@ the **stenographer** project.
 
 ## Format
 
+	POSIX Memory Sharing
+	====================
+
+	Between stenographer and this client.
+
+	+-----------+-----------+-----------+-----------+
+	| 1MB Block | 1MB Block | ... ...   | 1MB Block |
+	+-----------+-----------+-----------+-----------+
+
 	1MB Block									Memory Address
 	=========									==============
 												     ||
@@ -31,7 +40,7 @@ the **stenographer** project.
 	|                                |
 	|--------------------------------|
 	|                                |
-	|  struct tpacket3_hdr           |
+	|   struct tpacket3_hdr          |
 	|                                |
 	|--------------------------------|
 	|                                |
